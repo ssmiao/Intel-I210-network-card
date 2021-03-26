@@ -1,0 +1,63 @@
+;*******************************************************************************
+;*                                                                            **
+;*                     I N T E L   P R O P R I E T A R Y                      **
+;*                                                                            **
+;*   COPYRIGHT (c) 2006-2019 BY INTEL CORPORATION. ALL RIGHTS RESERVED.  NO   **
+;*   PART  OF  THIS  PROGRAM OR PUBLICATION MAY BE REPRODUCED, TRANSMITTED,   **
+;*   TRANSCRIBED, STORED IN A RETRIEVAL  SYSTEM,  OR  TRANSLATED  INTO  ANY   **
+;*   LANGUAGE OR COMPUTER LANGUAGE IN ANY FORM OR BY ANY MEANS, ELECTRONIC,   **
+;*   MECHANICAL, MAGNETIC, OPTICAL, CHEMICAL, MANUAL, OR OTHERWISE, WITHOUT   **
+;*   THE PRIOR WRITTEN PERMISSION OF :                                        **
+;*                                                                            **
+;*                             INTEL CORPORATION                              **
+;*                                                                            **
+;*                          2200 MISSION COLLEGE BLVD                         **
+;*                                                                            **
+;*                     SANTA CLARA, CALIFORNIA 95052-8119                     **
+;*                                                                            **
+;*******************************************************************************
+;
+;*******************************************************************************
+; iqvw32.INF
+;
+;
+; $Revision$
+;
+; Intel Tools SDK - install script for Windows 2000, Windows XP 32-bit,
+;                   Windows Server 2003 32-bit and Windows Vista
+;
+
+[Version]
+Signature = "$Windows NT$"
+Provider    = "Intel"
+CatalogFile = iqvw32.cat
+DriverVer   = 04/24/2019,1.3.2.18
+Class       = NALDevice
+ClassGuid   = {b83400f8-b7b2-4bb7-8fe3-d179eddb8e8b}
+
+[SourceDisksNames]
+1 = %DISKNAME%,,,
+
+[SourceDisksFiles]
+iqvw32.sys = 1,,
+
+[DefaultInstall]
+CopyFiles = iQV.CopyFiles
+
+[UnInstall]
+DelFiles  = iQV.DelFiles
+
+
+[DestinationDirs]
+iQV.CopyFiles = 12    ; Destination for iQV.CopyFiles section is %system32\drivers
+
+
+[iQV.CopyFiles]
+iqvw32.sys,,,2
+
+[iQV.DelFiles]
+iqvw32.sys
+
+
+[Strings]
+DISKNAME="Intel(R) Tools SDK Disk"

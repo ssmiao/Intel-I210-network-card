@@ -1,0 +1,65 @@
+@disclaimer
+This game is released as "Cardware". If you enjoy it please send a postcard to:
+
+		Jason M. Knight
+		233 Baker Street
+		Keene, NH 03431
+
+Source Code (C) Jason M Knight and released to the public domain. If you are
+going to give something away, lands sake just GIVE IT AWAY!!!. Don't give me
+none of that dirty hippy "open source" nonsense! Here's a tip: If someone
+starts running their mouth about "Freedom" and then weigh it down with a 35k
+licensing agreement placing restrictions on what you can and cannot do with it
+by way of loopholes in contract law and legalese nobody but a career lawyer
+can decipher...
+
+Well, does the term "snake oil" ring a bell?
+@end
+
+@help
+Command Line Options (case insensitive)
+
+  /safe        Do not reprogram CRTC on EGA/VGA. Better compatibility on
+               oddball hardware, but has some aspect ratio issues
+
+  /speaker     PC Speaker sound
+  /tandySound  Tandy/PCJr sound
+  /adlib       Adlib/Sound Blaster
+  /cms         CMS/Game Blaster sound
+
+On CMS/Game Blaster cards you may append an address thus:
+  /cms:220     Value in hex, valid range:
+               210,220,230,240,250,260
+               220 is the default
+
+  /mt32        Roland MT-32
+  /gm          General MIDI (GM/GS) type device
+  /midi        Custom MIDI Patchbank
+
+Midi devices can also accept parameters
+  /mt32:330    Value in hex, valid range:
+               220,230,240,250,300,320,330,332,334,336,340,350
+               330 is the default
+****
+
+  /joy         Enable Joystick Support
+
+  /debug       Pauses on startup to show subsystem messages and displays
+                 available DOS Memory, Stack and Heap
+
+  /? or /help  Displays this help information
+
+See readme.htm for more information.
+
+****
+
+@end
+
+@memory
+Insufficient free memory
+
+This program requires at least 66K (67,584 bytes) bytes of free RAM
+128K Total System RAM recommended
+
+See readme.htm for more information.
+@end

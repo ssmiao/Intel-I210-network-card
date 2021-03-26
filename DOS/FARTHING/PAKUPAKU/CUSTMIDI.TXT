@@ -1,0 +1,22 @@
+The MIDI support for PAKU PAKU 1.6 uses a small 16 voice translation table -- only a handful of those are actually used in-game. It is recommended you leave the MT-32 and GM patch tables alone, and use the supplied PAT_CUST.DAT file. Said file is simply 16 bytes long, each byte being the program change to send for each desired sound... The following table shows what each byte is, and the values used on the MT32 and GM/GS synth kits.
+
+ BYTE   DATA               MT32               GM/GS
+ ----   ----------------   ----------------   ----------------
+  00    LEAD               2F Square Wave
+  01    HARMONY (unused)   00 Piano
+  02    BASS               2F Square Wave
+  03    DRONE (unused)     00 Piano
+  04    PIANO (unused)     00 Piano
+05..07  reserved           07 Honkeytonk
+  08    SQUARE             2F Square Wave
+  09    FX1                2A Oboe 2001
+  0A    FX2                53 Clarinet 2
+  0B    FX3                53 Clarinet 2
+0C..0F  reserved           00 Piano
+
+The program also expects a standard MIDI drum kit on channel 10. I may allow customization of that in a future release. (or the next game).
+
+
+For Paku Paku you'll get best results from sounds that have no decay when sustained and attack,decay and sustain all having the same levels... Your synth should also support a 24 semitone pitch-bend... the GM/GS and Custom codebase sends the appropriate RPN to set that. Not all MIDI synths support this (the Microsoft GS Wavetable for example) so it's a craps shoot as to how newer synths or software synths will handle it.
+
+I may on a future release create custom MT-32 patch sounds for the game to better support it.

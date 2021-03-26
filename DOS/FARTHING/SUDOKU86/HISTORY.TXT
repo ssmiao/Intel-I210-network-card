@@ -1,0 +1,27 @@
+
+ [ History of Sudoku86 ]
+
+
+Sudoku86 1.0.3 [23 May 2015]:
+ - Video optimizations for faster rendering (10x speedup - the game loads in
+   5s on my 8086 PC now instead of 55s in v1.0.2).
+
+Sudoku86 1.0.2 [05 Jul 2014]:
+ - Support for double buffering on CGA,
+ - A few micro-optimizations of video routines,
+ - Fix for mice that return fake release clicks during an onclick event,
+ - Added a help screen under F1,
+ - Implemented a save/load feature,
+ - Added keyboard controls: new game (n), clear game (c), quick selection of
+   digits (1-9), next digit (space), help (F1), save (F5) and load (F7),
+ - Replaced time() with a call to int21,2Ch (smaller code size),
+ - Custom level files support on command line.
+
+Sudoku86 1.0.1 [28 Jun 2014]:
+ - Added support for CGA output,
+ - Included the SDM2LEV tool into the public package,
+ - Makefile and small adaptations for OpenWatcom compilation (courtesy of
+   Matej Horvat).
+
+Sudoku86 1.0 [26 Jun 2014]:
+ - First public release.

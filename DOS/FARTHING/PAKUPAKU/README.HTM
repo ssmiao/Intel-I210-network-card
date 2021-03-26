@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	lang="en"
+	xml:lang="en"
+><head>
+
+<meta
+	http-equiv="Content-Type"
+	content="text/html; charset=utf-8"
+/>
+
+<meta
+	http-equiv="Content-Language"
+	content="en"
+/>
+
+<style type="text/css" media="screen,projection,tv"><!--
+
+/* null margins and padding to give good cross-browser baseline */
+html,body,address,blockquote,div,
+form,fieldset,caption,
+h1,h2,h3,h4,h5,h6,
+hr,ul,li,ol,ul,
+table,tr,td,th,p,img {
+	margin:0;
+	padding:0;
+}
+
+img,fieldset {
+	border:none;
+}
+
+hr {
+	margin:0.5em;
+	visibility:hidden; /* hr are for CSS off users */
+}
+
+a {
+	display:inline-block;
+	vertical-align:bottom;
+	line-height:120%;
+	padding-bottom:1px;
+	text-decoration:none;
+	color:#FF0;
+	border-bottom:1px solid #FF0;
+}
+
+a:visited {
+	color:#F80;
+}
+
+a:active,
+a:focus,
+a:hover {
+	color:#FED;
+	padding-bottom:0;
+	border-bottom:2px solid #FED;
+}
+
+body {
+	text-align:center; /* center #pageWRapper IE 5.x */
+	padding:1em;
+	font:normal 100%/140% arial,helvetica,sans-serif;
+	color:#FFE8F0;
+	background:#125;
+}
+
+#pageWrapper {
+	width:95%;
+	min-width:752px;
+	max-width:60em;
+	margin:0 auto;
+	text-align:left;
+	background:#000;
+	border:0.8em double #00F;
+	-moz-border-radius:2.4em;
+	-webkit-border-radius:2.4em;
+	border-radius:2.4em;
+	box-shadow:0 0 50px 5px #000;
+}
+
+h1 {
+	overflow:hidden;
+	font:bold 400%/100% arial,helvetica,sans-serif;
+	padding:0.1em 4.9em 0.1em 0.25em;
+	margin-bottom:0.25em;
+	text-align:center;
+	text-transform:uppercase;
+	white-space:nowrap;
+	color:#FF0;
+	border-bottom:0.2em double #00F;
+}
+
+h1 small {
+	overflow:hidden;
+	zoom:1;
+	display:block;
+	text-align:right;
+	text-transform:none;
+	font:bold 25%/120% arial,helvetica,sans-serif;
+	color:#FFF;
+}
+
+h1 small span {
+	float:left;
+	text-align:left;
+}
+
+
+b {
+	color:#FF0;
+}
+
+p {
+	padding:0.5em 1em;
+}
+
+kbd {
+	color:#0CC;
+}
+
+code {
+	color:#F50;
+}
+
+em {
+	color:#DDD;
+}
+
+pre {
+	padding-left:3em;
+}
+
+#cardwareBox {
+	float:right;
+	display:inline; /* make IE behave on margins */
+	width:20em;
+	margin:-8.3em 0.8em 1em 1em;
+	padding-bottom:0.5em;
+	text-align:center;
+	font:normal 85%/140% arial,helvetica,sans-serif;
+	background:#000;
+	border:0.94em double #00F;
+	-moz-border-radius:1.88em;
+	-webkit-border-radius:1.88em;
+	border-radius:1.88em;
+}
+
+#cardwareBox p {
+	padding:1em;
+}
+
+#cardwareBox address {
+	display:block;
+}
+
+#cardwareBox h2 {
+	font:bold 120%/130% arial,helvetica,sans-serif;
+	padding:0.7em 0 0.2em;
+}
+
+#content {
+	padding:0 1em;
+}
+
+#content h2 {
+	padding:0.4em 0 0.2em;
+	font:bold 120%/130% arial,helvetica,sans-serif;
+	color:#FFF;
+	text-shadow:2px 0 6px #08F,-2px 0 6px #08F;
+}
+
+.commands,
+.revisions {
+	border-collapse:collapse;
+}
+
+.revisions ol {
+	padding-left:2em;
+}
+
+.revisions td,
+.revisions th,
+.commands td,
+.commands th {
+	padding:1em 0.5em 1em;
+	vertical-align:top;
+}
+
+.revisions td,
+.revisions th {
+	border-bottom:2px solid #00F;
+}
+
+.revisions .last td,
+.revisions .last th {
+	border:0;
+}
+
+.revisions th,
+.commands th {
+	width:1%;
+	padding-left:2em;
+	white-space:nowrap;
+	text-align:left;
+}
+.revisions th {
+	color:#0CC;
+}
+
+.revisions h3 {
+	color:#9DF;
+	font:bold 100%/140% arial,helvetica,sans-serif;
+}
+
+.revisions li {
+	padding-bottom:0.5em;
+}
+
+.revisions li li {
+	padding-bottom:0;
+}
+
+.revisions ol ul {
+	padding-left:2em;
+}
+
+#footer {
+	clear:both;
+	margin-top:1em;
+	padding:0.5em 1em;
+	font:normal 85%/140% arial,helvetica,sans-serif;
+	border-top:0.8em double #00F;
+}
+
+#footer p {
+	padding:0.5em 0;
+}
+
+#sectionMenu {
+	list-style:none;
+	text-align:left;
+	margin:0.5em;
+	border:solid #00F;
+	border-width:2px 2px 0 0;
+}
+
+#sectionMenu li {
+	display:inline;
+}
+
+#sectionMenu a {
+	display:block;
+	text-decoration:none;
+	padding:0.5em 0.5em 0.5em 4.8em;
+	text-indent:-4.3em;
+	color:#FFF;
+	background:#000;
+	border:solid #00F;
+	border-width:0 0 2px 2px;
+}
+
+#sectionMenu a:active,
+#sectionMenu a:focus,
+#sectionMenu a:hover {
+		background:#008;
+}
+
+
+--></style>
+
+<title>
+	README - Paku Paku 1.6
+</title>
+
+</head><body>
+
+<div id="pageWrapper">
+
+	<h1>
+		Paku Paku<br />
+		<small>
+			<span>Version 1.6 - 9 November 2011</span>
+			&copy; Jason M. Knight, Paladin Systems North
+		</small>
+	</h1>
+
+	<div id="cardwareBox">
+		<p>
+			This game is released as "Cardware".<br />
+			If you enjoy it please send a postcard to:
+		</p>
+		<address>
+			Jason M. Knight<br />
+			233 Baker Street<br />
+			Keene, NH 03431<br />
+		</address>
+		<p>
+			If you would like to see more "retrogames" produced in the future, feel free to make a small donation via paypal to deathshadow60@hotmail.com
+		</p>
+
+		<ul id="sectionMenu">
+			<li>
+				<a href="#overview"
+					accesskey="1"
+					title="Overview"
+				>
+					Overview
+				</a>
+			</li><li>
+				<a href="#keyboard"
+					accesskey="2"
+					title="Keyboard Controls"
+				>
+					Keyboard Controls
+				</a>
+			</li><li>
+				<a href="#commands"
+					accesskey="3"
+					title="Command Line Options"
+				>
+					Command Line Options
+				</a>
+			</li><li>
+				<a href="#video"
+					accesskey="4"
+					title="Video Tech Info"
+				>
+					Video Tech Info
+				</a>
+			</li><li>
+				<a href="#sound"
+					accesskey="5"
+					title="Sound Tech Info"
+				>
+					Sound Tech Info
+				</a>
+			</li><li>
+				<a href="#dosBox"
+					accesskey="6"
+					title="DosBox"
+				>
+					DosBox - Running Paku-paku on modern computer systems
+				</a>
+			</li><li>
+				<a href="#gameLogic"
+					accesskey="7"
+					title="Logic/Gameplay"
+				>
+					Game Logic and Gameplay differences
+				</a>
+			</li><li>
+				<a href="#revisions"
+					accesskey="8"
+					title="Revision Info"
+				>
+					Revision Info
+				</a>
+			</li><li>
+				<a href="#footer"
+					accesskey="9"
+					title="Disclaimer"
+				>
+					Disclaimer
+				</a>
+			</li>
+		</ul>
+
+		<h2>System Requirements</h2>
+		4.77mhz or faster 8088<br />
+		128k of RAM (66,560 bytes free in DOS)<br />
+		CGA, Tandy/PcJr, EGA or VGA video<br />
+
+		<h2>Recommended</h2>
+		Tandy/PcJr, C/MS Game Blaster,<br />
+		Roland MT-32<br />
+
+		<h2>Supported</h2>
+		Adlib, General MIDI<br />
+		<br />
+		<a href="http://www.deathshadow.com/downloads/paku_1_6.rar">Download .RAR 59k</a>
+		<a href="http://www.deathshadow.com/downloads/paku_1_6.zip">Download .ZIP 67k</a>
+	</div>
+
+	<div id="content">
+		<h2 id="overview">Overview</h2>
+		<p>
+			This game started out as an expansion to my Retrochallenge 2011 Winter Warmup entry. I made a Turbo Pascal 7 unit to implement the undocumented 160x100 16 color graphics mode on the original CGA card -- and decided to make a game with it. Since that original demo it has grown into a full fledged game with most of the familiar "Pac-type" elements present.
+		</p><p>
+			Support has been added for a wide array of early PC sound cards ranging from the simple PC speaker right up through to the Adlib series of sound cards.
+		</p>
+
+		<hr />
+
+		<h2 id="keyboard">Keyboard Controls</h2>
+		<table class="commands">
+			<tr>
+				<th>
+					<kbd>
+						ARROWS<br />
+						W,A,S,D<br />
+						8,6,4,2
+					</kbd>
+				</th>
+				<td>
+					Player Movement<br />
+					<em class="tip">* Generally you are best off pressing the movement key BEFORE you reach the turn.</em>
+				</td>
+			</tr><tr>
+				<th><kbd>O</kbd></th>
+				<td>Toggle Sound On/Off</td>
+			</tr><tr>
+				<th><kbd>J</kbd></th>
+				<td>
+					Recalibrate Joystick<br />
+					<em>*If enabled from command line with <kbd>/joy</kbd></em>
+				</td>
+			</tr><tr>
+				<th><kbd>ENTER<br />RETURN</kbd></th>
+				<td>Start Game at menu</td>
+			</tr><tr>
+				<th><kbd>ESC</kbd></th>
+				<td>Exit Game to Menu<br />Exit Program from Menu</td>
+			</tr>
+		</table>
+
+
+		<hr />
+
+		<h2 id="commands">Command Line Options</h2>
+		<p>
+			All command line options are case insensitive
+		</p>
+
+		<table class="commands">
+			<tr>
+				<th><kbd>/safe</kbd></th>
+				<td>
+					Do not reprogram CRTC on EGA/VGA. Better compatibility on oddball hardware, but has some aspect ratio issues
+				</td>
+			</tr><tr>
+				<th><kbd>/speaker</kbd></th>
+				<td>Force PC Speaker sound</td>
+			</tr><tr>
+				<th><kbd>/tandySound</kbd></th>
+				<td>Force Tandy/PCJr sound</td>
+			</tr><tr>
+				<th><kbd>/adlib</kbd></th>
+				<td>Force Adlib/Sound Blaster</td>
+			</tr><tr>
+				<th><kbd>/cms</kbd></th>
+				<td>
+					Force CMS/Game Blaster sound<br />
+					On CMS/Game Blaster cards you may append an address thus:
+				</td>
+			</tr><tr>
+				<th><kbd>/cms:220</kbd></th>
+				<td>
+					Value in hex, valid range:<br />
+					210,<b>220</b>,230,240,250,260<br />
+					<b>220</b> is the default.
+				</td>
+			</tr><tr>
+				<th>
+					<kbd>/mt32</kbd><br />
+					<kbd>/gm</kbd><br />
+					<kbd>/midi</kbd>
+				</th>
+				<td>
+					Force Roland MT-32 MIDI<br />
+					Force General MIDI<br />
+					Force Custom MIDI<br />
+					<em>MIDI device should support 24 semitone pitch bender range or allow setting via RPN<br />
+					Which Microsoft GS WaveTable does not support...</em><br />
+					<br />
+					Set value ranges as below
+				</td>
+			</tr><tr>
+				<th>
+					<kbd>/mt32:330</kbd><br />
+					<kbd>/gm:330</kbd><br />
+					<kbd>/midi:330</kbd>
+				</th><td>
+					Value in hex, valid range:<br />
+					220,230,240,250,300,320,<b>330</b>,332,334,336,340,350.<br />
+					<b>330</b> is the default.
+				</td>
+			</tr><tr>
+				<th><kbd>/joy</kbd></th>
+				<td>
+					Enable Joystick Support<br />
+					<em>Joystick support can cause crashes/slowdowns/other issues with certain incompatible joystick interfaces... or if you don't have the joystick actually plugged in. </em>
+				</td>
+			</tr><tr>
+				<th><kbd>/debug</kbd></th>
+				<td>
+					Pauses on startup to show subsystem messages.
+				</td>
+			</tr><tr>
+				<th><kbd>/? or /help</kbd></th>
+				<td> Displays this help information</td>
+			</tr>
+		</table>
+
+		<hr />
+
+		<h2 id="video">Video Technical</h2>
+		<p>
+			The video mode this game runs in is actually a sneaky trick with text. Because of this it originally only worked on the CGA card. Basically you fill the screen with character code $DD, which has half the character filled with the foreground color and half with the background color. This nets you a 160x25 "semigraphics" mode where to set pixels you just change the foreground for even numbered pixels and background for odd numbered. To get that up to 100 vertical pixels you reprogram the CGA registers to make it think all characters are only 2px tall.
+		</p><p>
+			Back in the early 90's Geoffrey Silverton figured out that you could implement it on the EGA and VGA cards by adjusting their character heights in a similar fashion, though you faced the problem of every other column on the VGA being one px wider than the others, and on the EGA you ended up with a blank bar across the bottom seventh of the screen with the aspect ratio messed up since 350 does not divide evenly by 100. This 'broken' but working mode of operation can be triggered on those cards using the <kbd>/safe</kbd> switch.
+		</p><p>
+			I have expanded upon that by way of my knowledge of the EGA card. The EGA can be used with a CGA monitor, though that restricts it's highest resolution to 640x200... This means that unlike when the EGA is plugged into an EGA monitor the text mode is actual mode 3, and not the expanded 720x350 mode 3+. The VGA by way of backwards compatibility ALSO has the actual mode 3 timing information stored in it's BIOS -- so all we have to do to get the actual 160x100 mode implemented is reprogram the display timings to the actual 80x25 text mode that uses a 640x200 resolution. This appears to work on most EGA and VGA cards I have tested with the exception of some laptop LCD's. Should you have graphics corruption on the EGA or VGA you should use <kbd>/safe</kbd> when starting the program. In <kbd>/safe</kbd> the aspect ratio will be incorrect on the EGA and there may be some odd distortion on VGA cards, but the game will run in a playable fashion.
+		</p><p>
+			Ideally the game should give you the CGA palette where color 6 is set to brown instead of ochre, however on many EGA cards the commands to reprogram the palette appear to be broken with the bits working as RGBi instead of RGBrgb. I suspect this is a side effect of reprogramming the CRTC into the CGA 200 mode 3, though I've been unable to determine where in the CRTC data this is turned on or off (or if it even can). As such on EGA systems I have left the yellow-ochre color in place.
+		</p>
+
+		<hr />
+
+		<h2 id="sound">Sound Technical</h2>
+		<p>
+			Originally I was only going to implement support for the PC speaker and Tandy Sound -- both of which are remarkably simple to program (once you understand the PIT)... but having a soundblaster 1.0 in one of my testbed machines I decided to try and implement the original "Creative Music System" or C/MS, which is also known as a Game Blaster. (the predecessor to the Sound Blaster). All game effects are programmed to work on a three voice system, so the extra channels in the C/MS went unused.
+		</p><p>
+			There is no reliable way to auto-detect the presence of a C/MS card that I'm aware of <em>(if anyone cares to correct me on that I'd love to hear it!)</em> so to use it you must start the program from the command line with <kbd>/cms</kbd>.
+		</p><p>
+			I figured while I was adding Game Blaster support, I would also program it to work with the Adlib card so owners of later model Sound Blasters aren't left out in the cold. The Adlib FM music is actually NOT as versatile at making sound effects IMHO as while it has several hundred more programming options, the card is painfully slow to program due to the delays used in it's port handling, and that pretty much everything is based on sine-waves making it very hard to get a "strong" sound out of it. EVERYTHING from the adlib sounds muddy or metallic.
+		</p><p>
+			As such, to my ears at least the C/MS and Tandy remain the best choice for audio when/if they are available.
+		</p><p>
+			The MIDI support is limited and, well... MIDI really wasn't designed for sound effects. The best sounding is on a MT-32 which is really what I designed it for, though later General MIDI devices that support a wider pitch bender range may work in a decent fashion. A 'custom midi' setting file 'PAT_CUST.DAT' is present to allow you to set up custom tone banks. See 'custMidi.txt' for more information.
+		</p>
+
+		<hr />
+
+		<h2 id="dosBox">Running it under DosBox</h2>
+		<p>
+			If you want to try this game on a modern non-DOS computer your best bet will be to run it under DosBox. Much of the game's development cycle was performed using DosBox for testing so it should run flawlessly. The best settings to use for DOSBOX are:
+		</p>
+		<pre><code>machine=cga
+core=auto
+cputype=auto
+cycles=auto
+oplmode=cms</code></pre>
+		<p>
+			You should then start the program with the <kbd>/cms</kbd> command line option for the best sound quality. The game should run well in just about any dosbox configuration given the support for all major color video cards and adlib support.
+		</p><p>
+			On Windows systems I highly recommend you set <code>output=ddraw</code> or even better <code>output=direct3d</code>, the latter only being present on SVN builds. (last time I checked). Linux and OSX users naturally should try the various OpenGL renderers.
+		</p>
+
+		<hr />
+
+		<h2 id="gameLogic">Game Logic</h2>
+		<p>
+			The game logic is similar in most respects to the original, though due to the 8:3 reduction in game resolution many elements had to be dropped or faked. For example the animation appeared jerky trying to make the ghosts move faster or slower than PakuPaku, so they are for the most part the same speed. In the original you could take corners faster than the ghosts by clipping the edges of each turn -- this was called "cornering" by most players. It was impractical to recreate that at such a low resolution so instead I gave the player a one pixel "boot in the patoot" at every corner to give a slight advantage.
+		</p><p>
+			When the ghost go into 'flee' mode when you eat one of the four super-pellets the ghosts are cut to half speed -- this proved using the 'random movement' logic to be too easy despite being remarkably close to the original game's logic. As such I have changed their flee logic to be a bit more intelligent, making you have to put a bit more effort into hunting them down.
+		</p><p>
+			Likewise their pursuit mode logic is a bit different -- for the most part the red ghost still tracks you directly, the magenta ghost tries to get in front of you, the cyan one's accuracy decreases the further away the red one is from you, and the brown one is still a bit... silly... but they've been tweaked with a bit of randomness to make them a hair less predictable. Likewise the movement restructions of not being able to turn upwards at the two center "T" shaped maze section while present, has a 1 in 10 chance of being ignored... just to give players a bit of a surprise every once in a while.
+		</p><p>
+			The level progressions follow the original game fairly closely, the entire game speeding up or slowing down depending on the level you are playing. The fastest level speed is pretty quick, even compared to the original so be ready for a bit of a challenge in that department.
+		</p>
+
+
+		<h2 id="revisions">Revisions</h2>
+		<table class="revisions">
+			<tr>
+				<th>
+					9 November 2011<br />
+					Revision 1.6<br />
+					( Public )
+				</th><td>
+					<ol>
+						<li>
+							<h3>Added MT32/GM/Midi support</h3>
+							*NOTE* requires midi device to be able to have 24 step pitch bend range or allow setting via RPN<br />
+							<em>Which "Microsoft GS Wavetable" does not...</em>
+						</li><li>
+							<h3>Better EGA and VGA support</h3>
+							<ul>
+								<li>VGA now uses BIOS scanline set, works properly on pretty much everything!</li>
+								<li>EGA sets misc register properly</li>
+							</ul>
+						</li><li>
+							<h3>"infinite fruit" bugfix</h3>
+							Added counter of how many have been shown
+						</li><li>
+							<h3>Fixed AI bugs</h3>
+							<em>may have increased difficulty</em>
+							<ul>
+								<li>random for ghost turn was ignored<li>
+								<li>random for ignore chase was always taken</li>
+								<li>death during final 'chase' resumed as 'always scatter'</li>
+							</ul>
+						</li><li>
+							<h3>Final Chase Slowdown Bug</h3>
+							Fixed behavior update being called every timer tick - got rid of late game 'slowdowns' on slower systems
+						</li><li>
+							<h3>Improved sound on/off handling</h3>
+							Can now turn sound off mid-theme and during longer sfx
+						</li><li>
+							<h3>Better dividing of tasks between audio timer ticks</h3>
+							Should lower CPU speed requirements even further
+						</li><li>
+							<h3>Removed many FOR, WHILE and REPEAT for recursive object calls</h3>
+							Speedup, lower memory use and simpler logic flow
+						</li><li>
+							<h3>Rewrote many library functions in ASM</h3>
+							speedup, smaller exe size
+						</li><li>
+							<h3>Stopped passing sprite pointer on every call</h3>
+							<ul>
+								<li>now handled by global pointer "tileSource"</li>
+								<li>speedup, lower stack use</li>
+							</ul>
+						</li><li>
+							<h3>New Joystick Handler</h3>
+							faster, reads both axis at same time
+						</li><li>
+							<h3>Replaced write/writeln with custom handler</h3>
+							reduced total code size 5%, who knew WRITE was inefficient?
+						</li><li>
+							<h3>Smaller/simpler graphics 'outtext' routines</h3>
+							<ul>
+								<li>removed all the custom number outputs</li>
+								<li>allows wider use of background erase or transparent</li>
+							</ul>
+						</li><li>
+							<h3>Rewrote 'circling' pixels on menu page</h3>
+							Faster, lower memory use, prevents really slow 8088's from bogging down
+						</li><li>
+							<h3>Renamed many procedures and variables</h3>
+							Code cleanup, make it easier to find things
+						</li><li>
+							<h3>Renamed all data files to .DAT (no more .FNT or .TDT)</h3>
+							Just makes copying just the needed stuff easier
+						</li><li>
+							<h3>Moved music config info into external .DAT files</h3>
+							Lowers heap/stack/code size, makes customization easier
+							<ul>
+								<li>
+									<code>PAT_MT32.DAT</code>,
+									<code>PAT_GM.DAT</code>,
+									<code>PAT_CUST.DAT</codE><br />
+									Patch files for MT32, General Midi or Custom (see custMidi.txt)
+								</li><li>
+									<code>PAT_ADLB.DAT</code><br />
+									Instrument Data for Adlib
+								</li>
+							</ul>
+						</li><li>
+							<h3>Distribution built with stack checking off</h3>
+							reduced exe size, faster execution. My stack is fine, don't need the compiler second guessing me.
+						</li><li>
+							Abandoned PC/JR and Tandy specific video codebases, no longer needed.
+						</li>
+					</ul>
+					<em>
+						Amazingly even with all the changes, rewrites and inclusion of new features... the executable dropped 1k in size and uses a smaller heap/stack.
+					</em>
+				</td>
+			</tr><tr>
+				<th>
+					21 March 2011<br />
+					Revision 1.5<br />
+					( public )
+				</th><td>
+					<ol>
+						<li>
+							Faster blitting routines for backbuffer thanks to code discussion at <a href="http://trixter.oldskool.org/2011/03/15/when-you-reach-the-top-keep-climbing/">Oldskooler Ramblings</a>
+						</li><li>
+							More PcJr. Fixes (I hope!)
+						</li>
+					</ol>
+				</td>
+			</tr><tr>
+				<th>
+					20 March 2011<br />
+					Revision 1.5 Beta<br />
+					( private )
+				</th><td>
+					<ol>
+						<li>Code Cleanup from revisioning system screwup complete</li>
+						<li>Testing new Jr. Textmode code</li>
+						<li>Tandy/Jr specific version included in source tree</li>
+						<li>Testing machine language optimizations for sprite blits</li>
+					</ol>
+					<br />
+					Version 1.4 was a train wreck -- I was using CVS on the code tree since version 1.2, and when I built 1.4 it had code regressions across the entire beast to problems I've not seen since the 0.89 alpha... So I've scrapped that nonsense and will just go back to doing it by hand as I pretty much had to brute force recode to clean up that mess anyways. Particularly annoying was large sections of code reverting back to their 1.1 and 1.2 incarnations.<br />
+					<br />
+					Ended up like every time I'm forced into using extra 'tools' for HTML/CSS/PHP -- it's ALWAYS a broken buggy disaster; how do people even use this ****? I swear, I've not had problems that bad with code since I was forced into working with Dreamweaver, Jquery AND some rubbish CSS framework -- all three of which just result in disasters.<br />
+					<br />
+					"Programmers Tools" -- I swear the only thing about these things that can be called professional grade tools are the people promoting their use.
+				</td>
+			</tr><tr>
+				<th>
+					5 March 2011<br />
+					Revision 1.4<br />
+					( Public )
+				</th><td>
+					<ol>
+						<li>
+							Minor code improvements to better handle 4.77mhz systems
+						</li><li>
+							Joystick reads spread out across task slicing to prevent slowdowns and handle how certain systems do not properly 222discharge the capacitors if they are at less than full charge. (Like PCJr, SB2.0) without causing some systems to hang completely (original PC game adapter, tandy 1000) while not introducing any extra 'delays'.
+						</li><li>
+							Fixed PC Jr. blink/intensity not being set right -- FINALLY
+						</li>
+					</ol>
+
+				</td>
+			<tr>
+				<th>
+					13 February 2011<br />
+					Revision 1.3<br />
+					( Public )
+				</th><td>
+					<ol>
+						<li>Added Joystick Support</li>
+						<li>Tracking of five most recent high scores</li>
+						<li>Saving of high scores to disk</li>
+						<li>New font renderer uses less memory and sped up menu.</li>
+						<li>Fixed bug with MCGA detecting as VGA</li>
+						<li>Fixed audio 'buzz' on PS/2 speakers</li>
+						<li>Memory footprint down to 67k</li>
+					</ol>
+				</td>
+			</tr><tr>
+				<th>
+					10 February 2011<br />
+					Revision 1.2 <br />
+					( Public )
+				</th><td>
+					Two days after the initial 1.0 release, and I'm already up to Rev 1.2. I've upped it to that number because I've rewritten the entire sprite engine from scratch. This has increased the memory footprint of the game to a "whopping" 70k, but by allocating an extra 16k to make two back-buffers I've completely eliminated flicker on 4.77mhz machines <em>(though true CGA cards WILL have snow, not a lot I can do about that!)</em>. The speedup and improvement to how it's drawn was so good, I removed the speed test AND the <kbd>/vsync</kbd> option completely!<br />
+					<br />
+					This technique should have occurred to me sooner, but I was so obsessed with not using memory. Even at 70k a machine with only 128k of RAM should be fine, even under DOS 3.
+				</td>
+			</tr><tr>
+				<th>
+					9 February 2011<br />
+					Revision 1.1 Alpha<br />
+					( Private )
+				</th>
+				<td>Minor improvements to the renderer</td>
+			</tr>
+			</tr><tr>
+				<th>
+					8 February 2011<br />
+					Revision 1.01<br />
+					( Public )
+				</th>
+				<td>Fixed bug with level up voice sticking between levels</td>
+			</tr><tr class="last">
+				<th>
+					4 February 2011<br />
+					Revision 1.0
+					( Public )
+				</th>
+				<td>Initial Release</td>
+			</tr>
+		</table>
+		<hr />
+
+	</div>
+
+	<div id="footer">
+		<p>
+			Source Code (C) Jason M Knight and released to the public domain. If you are going to give something away, lands sake just GIVE IT AWAY!!!. Don't give me none of that dirty hippy "open source" nonsense! Here's a tip: If someone starts running their mouth about "Freedom" and then weigh it down with a 35k licensing agreement placing restrictions on what you can and cannot do with it by way of loopholes in contract law and legalese nobody but a career lawyer can decipher...
+		</p><p>
+			Well, does the term "snake oil" ring a bell?
+		</p><p>
+			Feel free to do what you like with the code so long as you remain within the scope and practices of International Copyright law by giving credit to the original author - Jason M. Knight.
+		</p>
+	<!-- #footer --></div>
+
+<!-- #pageWrapper --></div>
+
+</body></html>

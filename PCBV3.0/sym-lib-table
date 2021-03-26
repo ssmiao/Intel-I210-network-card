@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name WGI210IT_S_LJXS)(type Legacy)(uri ${KIPRJMOD}/library/WGI210IT_S_LJXS.lib)(options "")(descr ""))
+  (lib (name HR911105A)(type Legacy)(uri ${KIPRJMOD}/HR911105A.lib)(options "")(descr ""))
+  (lib (name inteli210AT-rescue)(type Legacy)(uri ${KIPRJMOD}/inteli210AT-rescue.lib)(options "")(descr ""))
+)
